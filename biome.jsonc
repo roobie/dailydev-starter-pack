@@ -1,0 +1,33 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "src/**",
+      "functions/**",
+      "build/**",
+      "*.ts",
+      "*.json",
+      "*.jsonc"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        // PAT discipline: direct console.log is forbidden in functions/ and src/.
+        // The only sanctioned log surface is src/logger.ts, which redacts sensitive
+        // keys and PAT-shaped values before emitting. The single permitted console.log
+        // there is opt-out marked with a biome-ignore comment.
+        "noConsole": "error"
+      }
+    }
+  }
+}

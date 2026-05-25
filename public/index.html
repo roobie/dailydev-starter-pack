@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PackGen for daily.dev</title>
+  <meta name="description" content="Seed your daily.dev account from your public GitHub profile in 3 seconds.">
+  <link rel="canonical" href="https://dailydev-starter-pack.pages.dev/">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:,">
+  <meta property="og:title" content="PackGen for daily.dev">
+  <meta property="og:description" content="The missing inverse of action-devcard. From your GitHub to your daily.dev in 3 seconds.">
+  <meta property="og:image" content="https://dailydev-starter-pack.pages.dev/og/default.png">
+  <meta property="og:url" content="https://dailydev-starter-pack.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dailydev-starter-pack.pages.dev/og/default.png">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>PackGen</h1>
+      <p class="tagline">
+        GitHub username in. Curated daily.dev pack out.<br>
+        Tags, sources, custom feed, starter bookmarks.
+      </p>
+    </header>
+    <form action="/pack" method="get" autocomplete="off">
+      <label for="username">GitHub username</label>
+      <input
+        id="username"
+        type="text"
+        name="username"
+        pattern="[a-zA-Z0-9-]{1,39}"
+        required
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="e.g. roobie">
+      <button type="submit">Generate pack</button>
+    </form>
+    <section class="examples">
+      <p>Or see a live example: <a href="/pack/roobie">/pack/roobie</a></p>
+    </section>
+    <footer>
+      <p>A daily.dev Hackathon 2026 entry. Track 1: Developer Identity.</p>
+    </footer>
+  </main>
+</body>
+</html>

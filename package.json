@@ -1,0 +1,16 @@
+{
+  "name": "dailydev-starter-pack",
+  "version": "0.0.0",
+  "private": true,
+  "description": "daily.dev Cold-Start Co-Pilot — seed a new daily.dev account from a public GitHub profile",
+  "type": "module",
+  "dependencies": {
+    "workers-og": "0.0.27"
+  },
+  "devDependencies": {
+    "wrangler": "4.85.0"
+  },
+  "overrides": {
+    "ws": "8.20.1"
+  }
+}

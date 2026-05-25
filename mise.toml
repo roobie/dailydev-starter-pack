@@ -1,0 +1,11 @@
+
+[env]
+_.file = ".dev.vars"
+
+[tasks.dev]
+description = "Run wrangler pages dev locally on http://localhost:8788"
+run = "npx wrangler pages dev public"
+
+[tasks.deploy]
+description = "Deploy to Cloudflare Pages (set --project-name to your project)"
+run = "npx wrangler pages deploy public --project-name dailydev-starter-pack --branch main"

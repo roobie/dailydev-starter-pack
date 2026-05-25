@@ -1,0 +1,11 @@
+# Local dev secrets for `wrangler pages dev`. Copy to .dev.vars and populate.
+# .dev.vars is gitignored; this template is not.
+#
+# These variables are also accepted via `wrangler pages secret put <NAME>` for
+# the deployed environment.
+
+# Operator Plus PAT for server-side reads against api.daily.dev.
+DAILY_DEV_API_TOKEN=
+
+# Optional. Pushes GitHub quota from 60/hr (unauth) to 5000/hr.
+GH_OPERATOR_PAT=

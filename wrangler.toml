@@ -1,0 +1,22 @@
+# Cloudflare Pages configuration.
+#
+# Create your own KV namespace and paste its id into `id` below:
+#   npx wrangler kv namespace create PACK_KV
+# The KV id is a public identifier (not a secret) — access is gated by your
+# CF account auth, not by the id itself.
+#
+# Secrets are NOT set here. Use:
+#   wrangler pages secret put DAILY_DEV_API_TOKEN
+#   wrangler pages secret put GH_OPERATOR_PAT     # optional
+# For local dev, copy .dev.vars.example to .dev.vars and populate.
+
+name                   = "dailydev-starter-pack"
+# Capped to 2026-05-01 because that's the newest date supported by the workerd
+# binary shipped with wrangler@4.85.0. Bump both together if you need a newer
+# Workers API contract — wrangler 4.93.x ships a newer workerd.
+compatibility_date     = "2026-05-01"
+pages_build_output_dir = "public"
+
+[[kv_namespaces]]
+binding = "PACK_KV"
+id      = "0000000000000000000000000000000000000000"
